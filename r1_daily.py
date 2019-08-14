@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+  basic logistic
+"""
+
 MAP = {
     (-1, -1): {
         "site": "hospital",
@@ -126,7 +130,7 @@ class DailyAction(object):
 
     def main(self):
         while True:
-            cmd = str(raw_input("operate: ")).strip()
+            cmd = str(input("operate: ")).strip()
             if cmd.startswith("add"):
                 loc_action = cmd.replace("add", "").strip()
                 pre_location, action = loc_action.split(" ")
